@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espresso Pepperoni — доставка пиццы в Еманжелинске</title>
+<meta name="description" content="Доставка пиццы по Еманжелинску, в посёлок Зауральский и деревню Еманжелинка. 13 видов пиццы, размеры 30 и 40 см.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF7F2; --white:#fff; --stone:#E6DED2;
+  --ink:#1D1B19; --ink-2:#6E6860; --ink-3:#A39C92; --line:#ECE5DB;
+  --red:#D62828; --red-d:#B71F1F; --red-soft:#FCEAE7;
+  --green:#1E5B45; --green-soft:#E5F0E9;
+  --yellow:#FFC83D;
+  --r-lg:32px; --r:24px; --r-sm:16px; --wrap:1240px;
+  --shadow:0 18px 40px -22px rgba(60,40,20,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:150px}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;font-size:16px;line-height:1.55;font-weight:500;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul,ol{list-style:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.h2{font-size:clamp(30px,3.6vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.035em}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;white-space:nowrap;transition:background .2s,color .2s,transform .2s,border-color .2s}
+.btn svg{width:20px;height:20px}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
+.btn-ghost{background:var(--white);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* ---------- top bar + header ---------- */
+.topbar{background:var(--ink);color:rgba(255,255,255,.78);font-size:13.5px}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:40px}
+.topbar b{color:#fff;font-weight:600}
+.topbar-left{display:flex;align-items:center;gap:8px}
+.topbar-left svg{width:15px;height:15px;color:var(--yellow)}
+.topbar-right{display:flex;gap:24px}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;gap:32px;height:76px}
+.logo{display:flex;align-items:center;gap:8px;flex:none}
+.logo img{height:46px;width:auto}
+.logo .logo-word{height:44px}
+.nav{display:flex;gap:6px;margin-left:auto}
+.nav a{padding:10px 16px;border-radius:999px;font-weight:600;font-size:15px;transition:background .2s}
+.nav a:hover{background:var(--bg)}
+.header-phone{font-weight:700;white-space:nowrap}
+.cart-btn{display:flex;align-items:center;gap:10px;height:48px;padding:0 8px 0 20px;border-radius:999px;background:var(--red);color:#fff;font-weight:700;font-size:15px;transition:background .2s}
+.cart-btn:hover{background:var(--red-d)}
+.cart-btn svg{width:20px;height:20px}
+.cart-count{min-width:32px;height:32px;border-radius:16px;background:#fff;color:var(--red);font-size:14px;font-weight:800;display:grid;place-items:center;padding:0 9px;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.cart-count.bump{transform:scale(1.3)}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);place-items:center;flex:none}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;border-radius:2px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:'';position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+
+/* ---------- hero ---------- */
+.hero{padding:48px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border-radius:999px;background:var(--white);border:1px solid var(--line);font-size:14px;font-weight:600;color:var(--ink-2)}
+.hero-kicker i{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px var(--red-soft)}
+.hero h1{font-size:clamp(36px,4.8vw,64px);font-weight:800;line-height:1.04;letter-spacing:-.045em;margin:22px 0 22px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero-lead{font-size:18px;color:var(--ink-2);max-width:30em}
+.hero-divider{display:none;align-items:center;justify-content:center;gap:14px;color:var(--red)}
+.hero-divider i{width:84px;height:1.5px;background:linear-gradient(90deg,transparent,var(--red))}
+.hero-divider i:last-child{transform:scaleX(-1)}
+.hero-divider svg{width:18px;height:18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 40px}
+.hero-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.hero-points li{display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:var(--r-sm);background:var(--white);border:1px solid var(--line);font-size:14px;line-height:1.35;color:var(--ink-2)}
+.hero-points b{display:block;font-size:17px;color:var(--ink);font-weight:800;letter-spacing:-.02em}
+.hero-points svg{width:28px;height:28px;color:var(--red)}
+
+.hero-media{position:relative;display:grid;grid-template-columns:1.55fr 1fr;grid-template-rows:1fr 1fr;gap:14px;aspect-ratio:1.18}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;background:var(--stone)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.tile:hover img{transform:scale(1.05)}
+.tile-big{grid-row:span 2;border-radius:var(--r-lg)}
+.tile-label{position:absolute;left:12px;bottom:12px;right:12px;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);font-size:14px;font-weight:700}
+.tile-label span{color:var(--ink-2);font-weight:600;white-space:nowrap}
+.tile-big .tile-label{left:18px;bottom:18px;right:auto;padding:12px 18px;font-size:16px;gap:16px}
+.hero-sticker{position:absolute;z-index:2;top:-18px;left:-18px;width:108px;height:108px;border-radius:50%;background:var(--yellow);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:30px;line-height:1;letter-spacing:-.04em;transform:rotate(-12deg);box-shadow:0 12px 24px -10px rgba(60,40,20,.45)}
+.hero-sticker small{font-size:10.5px;letter-spacing:.02em;font-weight:700;margin-top:5px;line-height:1.15}
+
+/* ---------- menu ---------- */
+.menu{padding:40px 0 100px}
+.menu-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.menu-head p{color:var(--ink-2)}
+.chips-bar{position:sticky;top:76px;z-index:40;background:rgba(250,247,242,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);margin:0 -24px 28px;padding:12px 24px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;background:var(--white);border:1px solid var(--line);font-weight:700;font-size:15px;transition:background .2s,color .2s,border-color .2s}
+.chip small{font-size:12.5px;font-weight:700;color:var(--ink-3)}
+.chip:hover{border-color:var(--ink-3)}
+.chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip.active small{color:rgba(255,255,255,.55)}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{display:flex;flex-direction:column;background:var(--white);border-radius:var(--r);overflow:hidden;transition:box-shadow .3s,transform .3s}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.card[hidden],.extra[hidden]{display:none}
+.card.pop,.extra.pop{animation:pop .4s cubic-bezier(.2,.8,.3,1.2)}
+@keyframes pop{from{opacity:0;transform:scale(.96)}}
+.card-photo{position:relative;aspect-ratio:1;background:var(--stone);overflow:hidden}
+.card-photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-photo img{transform:scale(1.05)}
+.tags{position:absolute;top:14px;left:14px;display:flex;gap:6px}
+.tag{padding:6px 11px;border-radius:999px;font-size:12px;font-weight:800;background:var(--white);box-shadow:0 4px 12px -4px rgba(0,0,0,.2)}
+.tag-hot{color:var(--red)}
+.tag-veg{color:var(--green)}
+.tag-sea{color:#1F6D86}
+.card-body{display:flex;flex-direction:column;flex:1;padding:20px 22px 22px}
+.card h3{font-size:21px;font-weight:800;letter-spacing:-.03em;line-height:1.2}
+.card p{font-size:14.5px;line-height:1.5;color:var(--ink-2);margin:6px 0 18px;flex:1}
+.opts{display:grid;gap:8px;margin-bottom:18px}
+.seg{display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:var(--bg)}
+.seg button{height:36px;border-radius:999px;font-size:14px;font-weight:700;color:var(--ink-2);transition:background .2s,color .2s,box-shadow .2s}
+.seg button.on{background:var(--white);color:var(--ink);box-shadow:0 2px 8px -2px rgba(60,40,20,.2)}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.price b{display:block;font-size:23px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.price small{font-size:13px;color:var(--ink-3);font-weight:600}
+.add{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:150px;height:46px;padding:0 20px;border-radius:999px;background:var(--red-soft);color:var(--red-d);font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;transition:background .25s,color .25s,transform .2s}
+.add>span{display:flex;align-items:center;justify-content:center;gap:7px;transition:transform .4s cubic-bezier(.2,.8,.2,1),opacity .25s}
+.add svg{width:18px;height:18px}
+.add-ok{position:absolute;inset:0;opacity:0;transform:translateY(100%)}
+.add:hover{background:var(--red);color:#fff}
+.add:active{transform:scale(.96)}
+.add.done,.add.done:hover{background:var(--green);color:#fff}
+.add.done .add-label{opacity:0;transform:translateY(-46px)}
+.add.done .add-ok{opacity:1;transform:none}
+
+.extra{display:flex;flex-direction:column;justify-content:space-between;gap:24px;border-radius:var(--r);padding:32px 30px}
+.extra-promo{background:var(--red);color:#fff;position:relative;overflow:hidden}
+.extra-promo::after{content:'';position:absolute;right:-70px;bottom:-70px;width:220px;height:220px;border-radius:50%;border:34px solid rgba(255,255,255,.1)}
+.extra small{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.extra-big{font-size:clamp(76px,8vw,112px);font-weight:800;line-height:.9;letter-spacing:-.06em;margin:14px 0 10px}
+.extra h3{font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.03em}
+.extra p{font-size:15.5px;opacity:.85;margin-top:10px}
+.extra-call{background:var(--ink);color:#fff}
+.extra-call h3{margin-top:14px}
+.extra-call .btn{background:#fff;color:var(--ink)}
+.extra-call .btn:hover{background:var(--yellow)}
+.extra-promo .btn{background:#fff;color:var(--red);align-self:flex-start;position:relative;z-index:1}
+
+.toast{position:fixed;left:50%;bottom:24px;z-index:60;transform:translate(-50%,200px);background:var(--ink);color:#fff;padding:14px 22px;border-radius:999px;font-weight:600;font-size:15px;box-shadow:0 14px 30px rgba(0,0,0,.25);transition:transform .45s cubic-bezier(.2,.8,.3,1.2);white-space:nowrap}
+.toast.show{transform:translate(-50%,0)}
+.toast b{color:var(--yellow)}
+.cart-bar{display:none}
+
+@media (max-width:1080px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .menu{padding:24px 0 64px}
+  .menu-head{flex-direction:column;align-items:center;text-align:center;gap:6px}
+  .chips-bar{top:64px;margin:0 -16px 16px;padding:10px 16px}
+  .chip{height:40px;padding:0 16px;font-size:14px}
+  .grid{grid-template-columns:1fr;gap:12px}
+  .card{display:grid;grid-template-columns:118px 1fr;border-radius:20px;padding:12px;gap:0 14px}
+  .card:hover{transform:none}
+  .card-photo{grid-row:span 2;border-radius:14px;align-self:start}
+  .tags{top:6px;left:6px}
+  .tag{font-size:10px;padding:3px 7px}
+  .card-body{display:contents}
+  .card h3{grid-column:2;font-size:17px;align-self:end}
+  .card p{grid-column:2;font-size:13px;margin:4px 0 0;align-self:start}
+  .opts{grid-column:1/-1;margin:14px 0 12px;gap:6px}
+  .seg button{height:34px;font-size:13.5px}
+  .card-foot{grid-column:1/-1}
+  .price b{font-size:20px}
+  .extra{padding:26px 22px;border-radius:20px}
+  .toast{display:none}
+  .cart-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px;padding:0 8px 0 20px;border-radius:999px;background:var(--red);color:#fff;font-weight:700;box-shadow:0 14px 30px -10px rgba(214,40,40,.6);transform:translateY(120px);transition:transform .45s cubic-bezier(.2,.8,.3,1.2)}
+  .cart-bar.show{transform:none}
+  .cart-bar b{display:inline-grid;place-items:center;height:44px;padding:0 18px;border-radius:999px;background:#fff;color:var(--red);font-weight:800}
+}
+
+/* ---------- delivery ---------- */
+.delivery{padding:0 0 110px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 40px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head p{color:var(--ink-2);max-width:28em}
+.deliv-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;align-items:start}
+.zones,.steps{background:var(--white);border-radius:var(--r);padding:12px 28px}
+.zones-row{display:grid;grid-template-columns:1.5fr 1fr 1fr;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.zones-row:last-child{border-bottom:0}
+.zones-head{padding:14px 0;font-size:13px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+.place{display:flex;align-items:center;gap:14px}
+.place svg{flex:none;width:42px;height:42px}
+.place b{display:block;font-size:18px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.place small{font-size:13.5px;color:var(--ink-2)}
+.cost{font-size:22px;font-weight:800;letter-spacing:-.03em}
+.free span{display:inline-block;padding:7px 14px;border-radius:999px;background:var(--green-soft);color:var(--green);font-weight:800;font-size:15px;white-space:nowrap}
+.steps{padding:28px}
+.steps h3{font-size:22px;font-weight:800;letter-spacing:-.03em;margin-bottom:18px}
+.steps ol{display:grid;gap:16px}
+.steps li{display:flex;gap:14px}
+.steps li>b{flex:none;width:36px;height:36px;border-radius:50%;background:var(--red-soft);color:var(--red);display:grid;place-items:center;font-weight:800}
+.steps li strong{display:block;font-weight:800;line-height:1.3}
+.steps li span{font-size:14.5px;color:var(--ink-2)}
+.steps li a{color:var(--red);font-weight:700}
+.steps-foot{display:flex;align-items:center;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink-2)}
+.steps-foot svg{width:20px;height:20px;color:var(--ink-3)}
+.steps-foot b{color:var(--ink)}
+
+/* ---------- footer ---------- */
+.footer{background:var(--ink);color:rgba(255,255,255,.72);padding:72px 0 28px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr .8fr .8fr;gap:40px;padding-bottom:48px}
+.foot-logo{display:inline-block;background:#fff;border-radius:22px;padding:14px 18px;margin-bottom:18px}
+.foot-logo img{height:92px;width:auto}
+.foot-brand p{max-width:22em}
+.foot-col h4{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:16px}
+.foot-col a{display:block;width:max-content;padding:4px 0;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-col .foot-phone{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.02em;padding:0;margin-bottom:6px}
+.socials{display:flex;gap:8px;margin-top:18px}
+.foot-col .socials a{padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.08);color:#fff;font-weight:700;font-size:14px}
+.foot-col .socials a:hover{background:rgba(255,255,255,.16)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:13.5px;color:rgba(255,255,255,.45)}
+.foot-bottom a:hover{color:#fff}
+
+@media (max-width:1080px){
+  .deliv-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .delivery{padding-bottom:72px}
+  .sec-head{flex-direction:column;align-items:center;text-align:center;gap:8px}
+  .zones{padding:4px 16px}
+  .zones-head{display:none}
+  .zones-row{grid-template-columns:1fr auto;gap:10px 12px;padding:16px 0}
+  .place{grid-column:1/-1}
+  .place svg{width:36px;height:36px}
+  .cost{font-size:19px}
+  .cost::after{content:' доставка';font-size:13px;font-weight:600;color:var(--ink-2);letter-spacing:0}
+  .free span{font-size:13px;padding:6px 12px}
+  .free span::before{content:'бесплатно '}
+  .steps{padding:22px 18px}
+  .footer{padding:56px 0 100px}
+  .foot-grid{gap:32px 20px;padding-bottom:36px}
+  .foot-brand,.foot-grid>.foot-col:nth-child(2){grid-column:1/-1}
+  .foot-logo img{height:76px}
+}
+
+@media (max-width:1080px){
+  .nav,.header-phone,.topbar-right{display:none}
+  .burger{display:grid;margin-left:auto}
+  .header .wrap{gap:12px}
+  .nav.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:8px 16px 16px}
+  .nav.open a{padding:14px 12px;border-radius:12px;font-size:17px}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .topbar{font-size:12px}
+  .header .wrap{height:64px}
+  .nav.open{top:64px}
+  .logo img{height:36px}
+  .logo .logo-word{height:34px}
+  .cart-btn{padding:0 6px 0 14px;height:44px}
+  .cart-btn .cart-label{display:none}
+  .cart-count{min-width:30px;height:30px}
+  .burger{width:44px;height:44px}
+  .hero{padding:36px 0 56px}
+  .hero-text{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero h1{order:1;margin:0;font-size:clamp(34px,10vw,46px);line-height:1.06}
+  .hero h1 em{display:block}
+  .hero-divider{order:2;display:flex;margin:20px 0 16px}
+  .hero-kicker{order:3;padding:0;background:none;border:0;border-radius:0;max-width:20em;font-size:13px;font-weight:800;line-height:1.75;letter-spacing:.12em;text-transform:uppercase;color:var(--red);text-wrap:balance}
+  .hero-kicker i{display:none}
+  .hero-lead{order:4;margin-top:14px;font-size:16.5px;line-height:1.6}
+  .hero-cta{order:5;flex-direction:column;width:100%;gap:12px;margin:28px 0 24px}
+  .hero-cta .btn{width:100%;height:60px;font-size:17px}
+  .hero-points{order:6;width:100%;gap:8px}
+  .hero-points li{align-items:center;text-align:center;padding:12px 8px;gap:8px;font-size:12px}
+  .hero-points b{font-size:14px}
+  .hero-points svg{width:22px;height:22px}
+  .hero-media{gap:10px}
+  .tile-label{left:8px;right:8px;bottom:8px;padding:7px 10px;font-size:12px;flex-direction:column;align-items:flex-start;gap:0}
+  .tile-big .tile-label{left:10px;bottom:10px;padding:9px 12px;font-size:14px;flex-direction:row;gap:10px}
+  .hero-sticker{width:80px;height:80px;font-size:22px;top:-12px;left:-8px}
+  .hero-sticker small{font-size:8.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+/* ---------- корзина и оформление ---------- */
+input,select,textarea{font:inherit;color:var(--ink)}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+body.lock{overflow:hidden}
+.drawer{position:fixed;inset:0;z-index:100;visibility:hidden;transition:visibility 0s .45s}
+.drawer.open{visibility:visible;transition:none}
+.drawer-shade{position:absolute;inset:0;background:rgba(29,27,25,.48);opacity:0;transition:opacity .35s}
+.drawer.open .drawer-shade{opacity:1}
+.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:min(470px,100%);display:flex;flex-direction:column;background:var(--bg);box-shadow:-30px 0 60px -30px rgba(29,27,25,.45);transform:translateX(102%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.drawer.open .drawer-panel{transform:none}
+.drawer [hidden]{display:none!important}
+
+.drawer-top{background:var(--white);border-bottom:1px solid var(--line);flex:none}
+.drawer-head{display:flex;align-items:center;gap:10px;padding:18px 20px 14px 24px}
+.drawer-head h2{font-size:24px;font-weight:800;letter-spacing:-.035em;line-height:1.2}
+.drawer-head h2 small{font-size:15px;font-weight:700;color:var(--ink-3);margin-left:6px;letter-spacing:0}
+.icon-btn{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--bg);color:var(--ink);transition:background .2s}
+.icon-btn:hover{background:var(--line)}
+.icon-btn svg{width:20px;height:20px}
+.drawer-close{margin-left:auto}
+.back-btn{margin-left:-6px}
+.progress{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 24px 16px}
+.progress span{font-size:12px;font-weight:700;color:var(--ink-3);transition:color .3s}
+.progress span::before{content:'';display:block;height:4px;border-radius:4px;background:var(--line);margin-bottom:7px;transition:background .3s}
+.progress span.on{color:var(--ink)}
+.progress span.on::before{background:var(--red)}
+
+.drawer-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:18px 20px 28px}
+.view{display:none}
+.view.active{display:block;animation:viewIn .35s ease}
+@keyframes viewIn{from{opacity:0;transform:translateY(8px)}}
+
+/* пустая корзина */
+.empty{text-align:center;padding:48px 12px 24px}
+.empty-ill{width:148px;height:148px;margin:0 auto 22px;border-radius:50%;background:var(--white);display:grid;place-items:center;box-shadow:inset 0 0 0 10px var(--bg)}
+.empty-ill img{width:92px}
+.empty h3{font-size:22px;font-weight:800;letter-spacing:-.03em}
+.empty p{color:var(--ink-2);margin:8px auto 24px;max-width:22em}
+
+/* корзина */
+.free-bar{background:var(--white);border-radius:18px;padding:14px 16px 16px;margin-bottom:12px}
+.free-bar p{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;font-weight:600;color:var(--ink-2)}
+.free-bar p b{color:var(--ink);font-weight:800;white-space:nowrap}
+.free-track{height:8px;border-radius:8px;background:var(--bg);margin-top:10px;overflow:hidden}
+.free-track i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,#F59E3B,var(--red));transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.free-bar.reached p{color:var(--green)}
+.free-bar.reached .free-track i{background:var(--green)}
+
+.items{background:var(--white);border-radius:20px;padding:2px 16px}
+.item{display:grid;grid-template-columns:76px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item img{width:76px;height:76px;border-radius:14px;object-fit:cover;background:var(--stone)}
+.item h4{font-size:16px;font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.item-opts{font-size:13px;color:var(--ink-2);margin-top:2px}
+.item-side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.item-price{font-weight:800;font-size:16px;white-space:nowrap}
+.stepper{display:inline-flex;align-items:center;background:var(--bg);border-radius:999px;padding:3px}
+.stepper button{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;transition:background .2s,color .2s}
+.stepper button:hover{background:var(--white);color:var(--red)}
+.stepper svg{width:14px;height:14px}
+.stepper output{min-width:24px;text-align:center;font-weight:800;font-size:14px}
+
+.promo-note{display:flex;gap:12px;align-items:center;margin-top:12px;padding:12px 16px;border-radius:18px;background:#FFF3D1;font-size:14px;font-weight:600;line-height:1.4}
+.promo-note b{flex:none;width:40px;height:40px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:800;font-size:13px}
+
+.upsell{margin-top:26px}
+.upsell h3{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.upsell-list{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 20px 4px}
+.upsell-list::-webkit-scrollbar{display:none}
+.ups{flex:none;width:140px;background:var(--white);border-radius:18px;padding:8px 8px 10px;text-align:left;transition:transform .2s,box-shadow .2s}
+.ups:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.ups img{width:100%;aspect-ratio:1;border-radius:12px;object-fit:cover;margin-bottom:8px}
+.ups b{display:block;font-size:13.5px;font-weight:800;line-height:1.25;padding:0 4px;min-height:34px}
+.ups span{display:flex;justify-content:space-between;align-items:center;padding:6px 4px 0;font-size:13px;font-weight:700;color:var(--ink-2)}
+.ups i{width:30px;height:30px;border-radius:50%;background:var(--red-soft);color:var(--red);display:grid;place-items:center}
+.ups i svg{width:15px;height:15px}
+
+/* оформление */
+.form-block{background:var(--white);border-radius:20px;padding:18px 16px;margin-bottom:12px}
+.form-block h3{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+.form-block h3 i{width:26px;height:26px;border-radius:50%;background:var(--red-soft);color:var(--red);display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:800}
+.zone-opts{display:grid;gap:8px;margin-bottom:12px}
+.zone-opt{position:relative;display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--line);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s}
+.zone-opt:hover{border-color:var(--ink-3)}
+.zone-opt input{position:absolute;opacity:0;pointer-events:none}
+.zone-opt .radio{flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--ink-3);display:grid;place-items:center;transition:border-color .2s}
+.zone-opt b{font-weight:700;font-size:15px}
+.zone-opt b small{display:block;font-weight:500;color:var(--ink-3);font-size:12.5px;margin-top:1px}
+.zone-opt em{margin-left:auto;font-style:normal;font-size:13.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.zone-opt:has(input:checked){border-color:var(--red);background:#FFF8F6}
+.zone-opt:has(input:checked) .radio{border-color:var(--red)}
+.zone-opt:has(input:checked) .radio::after{content:'';width:10px;height:10px;border-radius:50%;background:var(--red)}
+.zone-opt:has(input:focus-visible){outline:3px solid var(--red);outline-offset:2px}
+
+.fields{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fld{display:grid;gap:6px;grid-column:1/-1;align-content:start}
+.fld.third{grid-column:auto}
+.fld>span{font-size:13px;font-weight:700;color:var(--ink-2)}
+.fld>span small{font-weight:500;color:var(--ink-3)}
+.fld input,.fld select,.fld textarea{width:100%;height:50px;border:1.5px solid var(--line);border-radius:14px;padding:0 14px;font-size:16px;font-weight:500;background:var(--white);transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.fld select{background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236E6860' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 14px center/18px no-repeat;padding-right:40px}
+.fld textarea{height:84px;padding:12px 14px;resize:none;line-height:1.45}
+.fld input::placeholder,.fld textarea::placeholder{color:var(--ink-3)}
+.fld input:hover,.fld select:hover,.fld textarea:hover{border-color:var(--ink-3)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 4px rgba(29,27,25,.07)}
+.fld em{display:none;font-style:normal;font-size:12.5px;font-weight:600;color:var(--red)}
+.fld.err input{border-color:var(--red);box-shadow:0 0 0 4px var(--red-soft)}
+.fld.err em{display:block}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;pointer-events:none}
+.pill span{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);font-weight:700;font-size:14.5px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.pill span:hover{border-color:var(--ink-3)}
+.pill span svg{width:18px;height:18px}
+.pill input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.pill input:focus-visible+span{outline:3px solid var(--red);outline-offset:2px}
+.reveal-fld{margin-top:12px}
+.reveal-fld[hidden]{display:none}
+
+/* готово */
+.done{text-align:center;padding:24px 0 4px}
+.done-mark{width:96px;height:96px;margin:0 auto 22px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;box-shadow:0 0 0 12px var(--green-soft)}
+.view.active .done-mark{animation:popIn .55s cubic-bezier(.2,.8,.3,1.3)}
+.done-mark svg{width:46px;height:46px;stroke-dasharray:32;stroke-dashoffset:32}
+.view.active .done-mark svg{animation:draw .45s .3s forwards}
+@keyframes popIn{from{transform:scale(.4);opacity:0}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.done h3{font-size:27px;font-weight:800;letter-spacing:-.035em;line-height:1.15}
+.done-num{display:inline-block;margin-top:12px;padding:6px 14px;border-radius:999px;background:var(--white);font-weight:800;font-size:14px}
+.done>p{color:var(--ink-2);max-width:25em;margin:14px auto 0}
+.receipt{text-align:left;background:var(--white);border-radius:20px;padding:6px 18px;margin-top:24px}
+.receipt h4{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding:14px 0 4px}
+.receipt-row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.receipt-row:last-child{border-bottom:0}
+.receipt-row span{color:var(--ink-2)}
+.receipt-row b{text-align:right;font-weight:700}
+.receipt-row.total b{font-size:19px;font-weight:800}
+
+/* низ панели */
+.drawer-foot{flex:none;padding:14px 20px max(18px,env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--line)}
+.sum-rows{display:grid;gap:5px;margin-bottom:14px;font-size:14px;color:var(--ink-2)}
+.sum-rows div{display:flex;justify-content:space-between;gap:12px}
+.sum-rows b{color:var(--ink);font-weight:700}
+.sum-rows .minus b{color:var(--green)}
+.drawer-foot .btn{width:100%;height:58px;justify-content:space-between;padding:0 24px;font-size:16.5px}
+.drawer-foot .btn.center{justify-content:center}
+.legal{font-size:12px;line-height:1.45;color:var(--ink-3);text-align:center;margin-top:10px}
+.legal a{text-decoration:underline}
+.legal[hidden]{display:none}
+
+@media (max-width:640px){
+  body:has(.cart-bar.show){padding-bottom:84px}
+  .cart-bar{width:calc(100% - 24px)}
+  .drawer-panel{top:auto;width:100%;height:calc(100% - 28px);border-radius:24px 24px 0 0;transform:translateY(102%);overflow:hidden}
+  .drawer-panel::before{content:'';position:absolute;top:8px;left:50%;width:40px;height:5px;margin-left:-20px;border-radius:5px;background:var(--line);z-index:1}
+  .drawer-head{padding:22px 16px 12px 20px}
+  .progress{padding:0 20px 14px}
+  .drawer-body{padding:14px 14px 24px}
+  .upsell-list{margin:0 -14px;padding:0 14px 4px}
+  .item{grid-template-columns:64px 1fr auto;gap:12px}
+  .item img{width:64px;height:64px}
+  .item h4{font-size:15px}
+  .drawer-foot{padding:12px 14px max(14px,env(safe-area-inset-bottom))}
+  .zone-opt{padding:12px}
+}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22s-7-6.4-7-12a7 7 0 0 1 14 0c0 5.6-7 12-7 12zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg>
+      <span><b>Еманжелинск</b> · доставка 100 ₽, бесплатно от 1 700 ₽</span>
+    </div>
+    <div class="topbar-right">
+      <span>Ежедневно 10:00 — 22:00</span>
+      <a href="tel:+79000000000"><b>+7 (900) 000-00-00</b></a>
+    </div>
+  </div>
+</div>
+
+<header class="header" id="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Espresso Pepperoni Pizza — на главную">
+      <img src="img/logo-slice.jpg" alt="" width="200" height="163">
+      <img class="logo-word" src="img/logo-word.jpg" alt="Espresso Pepperoni Pizza" width="398" height="200">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#menu">Меню</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="header-phone" href="tel:+79000000000">+7 (900) 000-00-00</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+    <button class="cart-btn" type="button" data-open-cart aria-label="Корзина" aria-haspopup="dialog" aria-controls="cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+      <span class="cart-label">Корзина</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="hero-kicker"><i></i>Доставка пиццы в Еманжелинске</span>
+      <h1>Горячая пицца <em>с&nbsp;доставкой</em> по&nbsp;Еманжелинску</h1>
+      <div class="hero-divider" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="M12 2c.6 4.7 2.3 7.4 10 10-7.7 2.6-9.4 5.3-10 10-.6-4.7-2.3-7.4-10-10 7.7-2.6 9.4-5.3 10-10z" fill="currentColor"/></svg><i></i></div>
+      <p class="hero-lead">13 пицц на&nbsp;любой вкус в&nbsp;двух размерах&nbsp;— 30 и&nbsp;40&nbsp;см. Привозим по&nbsp;городу, в&nbsp;посёлок Зауральский и&nbsp;деревню Еманжелинка.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#menu">Смотреть меню
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+79000000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>+7 (900) 000-00-00</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span><b>100 ₽</b>доставка по городу</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8S10.5 3 8 3.5 7 7.5 12 8zm0 0s1.5-5 4-4.5 1 4-4 4.5z"/></svg><span><b>Бесплатно</b>от 1 700 ₽ по городу</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><span><b>−10%</b>на все пиццы по понедельникам</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-sticker">−10%<small>по понедель&shy;никам</small></div>
+      <a href="#menu" class="tile tile-big"><img src="img/pizza/pepperoni.jpg?v=3" alt="Пицца Пепперони" width="900" height="900"><span class="tile-label">Пепперони <span>от 790 ₽</span></span></a>
+      <a href="#menu" class="tile"><img src="img/pizza/margarita.jpg?v=3" alt="Пицца Маргарита" width="900" height="900"><span class="tile-label">Маргарита <span>от 750 ₽</span></span></a>
+      <a href="#menu" class="tile"><img src="img/pizza/morskaya-losos.jpg?v=3" alt="Морская пицца с лососем" width="900" height="900"><span class="tile-label">Морская <span>от 950 ₽</span></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2 class="h2">Меню</h2>
+      <p>13 пицц · все в&nbsp;размерах 30 и&nbsp;40&nbsp;см</p>
+    </div>
+    <div class="chips-bar"><div class="chips" id="chips"></div></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status"></div>
+<button class="cart-bar" id="cartBar" type="button" data-open-cart><span id="cartBarText">Корзина</span><b id="cartBarSum">0 ₽</b></button>
+
+<section class="delivery" id="delivery">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2">Доставка</h2>
+      <p>Привозим пиццу по&nbsp;Еманжелинску, в&nbsp;посёлок Зауральский и&nbsp;деревню Еманжелинка.</p>
+    </div>
+    <div class="deliv-grid">
+      <div class="zones">
+        <div class="zones-row zones-head"><span>Куда</span><span>Доставка</span><span>Бесплатно</span></div>
+        <div class="zones-row">
+          <span class="place"><svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="21" fill="#D62828"/><path d="M21 31s-7.5-6.9-7.5-12.7a7.5 7.5 0 0 1 15 0C28.5 24.1 21 31 21 31z" fill="#fff"/><circle cx="21" cy="18.5" r="2.8" fill="#D62828"/></svg><span><b>Еманжелинск</b><small>по всему городу</small></span></span>
+          <span class="cost">100 ₽</span>
+          <span class="free"><span>от 1 700 ₽</span></span>
+        </div>
+        <div class="zones-row">
+          <span class="place"><svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="21" fill="#FCEAE7"/><path d="M21 31s-7.5-6.9-7.5-12.7a7.5 7.5 0 0 1 15 0C28.5 24.1 21 31 21 31z" fill="#D62828"/><circle cx="21" cy="18.5" r="2.8" fill="#FCEAE7"/></svg><span><b>Зауральский</b><small>посёлок</small></span></span>
+          <span class="cost">200 ₽</span>
+          <span class="free"><span>от 2 500 ₽</span></span>
+        </div>
+        <div class="zones-row">
+          <span class="place"><svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="21" fill="#FCEAE7"/><path d="M21 31s-7.5-6.9-7.5-12.7a7.5 7.5 0 0 1 15 0C28.5 24.1 21 31 21 31z" fill="#D62828"/><circle cx="21" cy="18.5" r="2.8" fill="#FCEAE7"/></svg><span><b>Еманжелинка</b><small>деревня</small></span></span>
+          <span class="cost">200 ₽</span>
+          <span class="free"><span>от 2 500 ₽</span></span>
+        </div>
+      </div>
+      <div class="steps">
+        <h3>Как заказать</h3>
+        <ol>
+          <li><b>1</b><div><strong>Соберите корзину</strong><span>Пиццы, размер 30 или 40&nbsp;см, а&nbsp;где можно&nbsp;— соус</span></div></li>
+          <li><b>2</b><div><strong>Оформите заказ</strong><span>Адрес, телефон и&nbsp;удобное время&nbsp;— или просто позвоните <a href="tel:+79000000000">+7 (900) 000-00-00</a></span></div></li>
+          <li><b>3</b><div><strong>Встречайте курьера</strong><span>Перезвоним, подтвердим заказ и&nbsp;привезём горячую пиццу</span></div></li>
+        </ol>
+        <div class="steps-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Принимаем заказы <b>ежедневно 10:00 — 22:00</b></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="foot-logo"><img src="img/logo.jpg" alt="Espresso Pepperoni Pizza" width="560" height="535"></a>
+        <p>Доставка пиццы в&nbsp;Еманжелинске, посёлке Зауральский и&nbsp;деревне Еманжелинка.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Контакты</h4>
+        <a class="foot-phone" href="tel:+79000000000">+7 (900) 000-00-00</a>
+        <span>Ежедневно 10:00 — 22:00</span>
+        <div class="socials"><a href="#">ВКонтакте</a><a href="#">Telegram</a></div>
+      </div>
+      <div class="foot-col">
+        <h4>Меню</h4>
+        <a href="#menu">Классика</a><a href="#menu">Мясные</a><a href="#menu">Без мяса</a><a href="#menu">Острые</a><a href="#menu">Морские</a>
+      </div>
+      <div class="foot-col">
+        <h4>Покупателям</h4>
+        <a href="#delivery">Доставка</a><a href="#menu">Акции</a><a href="#delivery">Как заказать</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Espresso Pepperoni Pizza · Еманжелинск</span>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<div class="drawer" id="cart" aria-hidden="true">
+  <div class="drawer-shade" data-close></div>
+  <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <header class="drawer-top">
+      <div class="drawer-head">
+        <button class="icon-btn back-btn" id="backBtn" type="button" aria-label="Назад в корзину" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <h2 id="cartTitle" tabindex="-1">Корзина</h2>
+        <button class="icon-btn drawer-close" type="button" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="progress" id="progress"><span>Корзина</span><span>Оформление</span><span>Готово</span></div>
+    </header>
+
+    <div class="drawer-body" id="drawerBody">
+      <section class="view" data-view="empty">
+        <div class="empty">
+          <div class="empty-ill"><img src="img/logo-slice.jpg" alt="" width="200" height="163"></div>
+          <h3>В корзине пока пусто</h3>
+          <p>Загляните в меню&nbsp;— там 13 пицц, от&nbsp;Маргариты до&nbsp;Морской с&nbsp;лососем.</p>
+          <button class="btn btn-red" type="button" data-to-menu>Открыть меню</button>
+        </div>
+      </section>
+
+      <section class="view" data-view="cart">
+        <div class="free-bar" id="freeBar"><p></p><div class="free-track"><i></i></div></div>
+        <div class="items" id="items"></div>
+        <div class="promo-note" id="promoNote"></div>
+        <div class="upsell">
+          <h3>Добавить к заказу?</h3>
+          <div class="upsell-list" id="upsell"></div>
+        </div>
+      </section>
+
+      <section class="view" data-view="checkout">
+        <form id="orderForm" novalidate>
+          <div class="form-block">
+            <h3><i>1</i>Куда привезти</h3>
+            <div class="zone-opts" id="zoneOpts"></div>
+            <div class="fields">
+              <label class="fld" id="f-street"><span>Улица и дом</span><input name="street" autocomplete="address-line1" placeholder="Например, ул. Ленина, 12"><em>Укажите улицу и номер дома</em></label>
+              <label class="fld third"><span>Подъезд</span><input name="entrance" inputmode="numeric"></label>
+              <label class="fld third"><span>Этаж</span><input name="floor" inputmode="numeric"></label>
+              <label class="fld third"><span>Квартира</span><input name="flat"></label>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3><i>2</i>Когда</h3>
+            <div class="pills">
+              <label class="pill"><input type="radio" name="when" value="asap" checked><span>Как можно скорее</span></label>
+              <label class="pill"><input type="radio" name="when" value="time"><span>Ко времени</span></label>
+            </div>
+            <label class="fld reveal-fld" id="timeFld" hidden><span>Во сколько привезти</span><select name="time" id="timeSelect"></select></label>
+          </div>
+
+          <div class="form-block">
+            <h3><i>3</i>Контакты</h3>
+            <div class="fields">
+              <label class="fld" id="f-name"><span>Имя</span><input name="name" autocomplete="given-name" placeholder="Как к вам обращаться"><em>Напишите, как к вам обращаться</em></label>
+              <label class="fld" id="f-phone"><span>Телефон</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"><em>Нужен номер из 11 цифр, чтобы мы могли перезвонить</em></label>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3><i>4</i>Оплата при получении</h3>
+            <div class="pills">
+              <label class="pill"><input type="radio" name="pay" value="cash" checked><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>Наличными</span></label>
+              <label class="pill"><input type="radio" name="pay" value="card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg>Картой курьеру</span></label>
+            </div>
+            <label class="fld reveal-fld" id="changeFld"><span>С какой суммы нужна сдача <small>· необязательно</small></span><input name="change" inputmode="numeric" placeholder="Например, 2 000 ₽"></label>
+          </div>
+
+          <div class="form-block">
+            <h3><i>5</i>Комментарий</h3>
+            <label class="fld"><textarea name="comment" placeholder="Домофон, ориентир или пожелания к заказу" aria-label="Комментарий к заказу"></textarea></label>
+          </div>
+        </form>
+      </section>
+
+      <section class="view" data-view="done">
+        <div class="done">
+          <div class="done-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div>
+          <h3 id="doneTitle">Спасибо, заказ принят!</h3>
+          <span class="done-num" id="doneNum"></span>
+          <p>Скоро перезвоним на&nbsp;<b id="donePhone"></b>, чтобы подтвердить заказ и&nbsp;время доставки.</p>
+          <div class="receipt" id="receipt"></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="drawer-foot" id="drawerFoot">
+      <div class="sum-rows" id="sumRows"></div>
+      <button class="btn btn-red" type="button" id="mainBtn"><span id="mainLabel">Оформить заказ</span><span id="mainSum"></span></button>
+      <p class="legal" id="legal" hidden>Нажимая кнопку, вы соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+    </footer>
+  </aside>
+</div>
+
+<script>
+/* ---------- шапка ---------- */
+const nav = document.getElementById('nav');
+const burger = document.getElementById('burger');
+burger.addEventListener('click', () => { const open = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', String(open)); });
+nav.addEventListener('click', e => { if (e.target.closest('a')) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); } });
+
+/* ---------- меню (составы и цены — от клиента) ---------- */
+// p: цены [30 см, 40 см]; sauce: соус по умолчанию, если его можно выбрать (0 — красный, 1 — белый)
+const MENU = [
+  {n:'Пепперони', img:'pepperoni', d:'Красный соус, колбаска пепперони, шампиньоны, томаты, моцарелла, итальянские травы', p:[790,890], c:['classic','meat']},
+  {n:'Маргарита', img:'margarita', d:'Красный соус, моцарелла, томаты, листья свежего базилика', p:[750,850], c:['classic','veg'], t:['veg']},
+  {n:'Ветчина и грибы', img:'vetchina-griby', d:'Белый соус, куриная ветчина, свиная ветчина, грибы, моцарелла', p:[770,870], c:['classic','meat']},
+  {n:'Четыре сыра', img:'chetyre-syra', d:'Белый соус, мягкий сыр фета, горгонзола, пармезан, моцарелла, итальянские травы', p:[820,920], c:['classic','veg'], t:['veg']},
+  {n:'Вегетарианская', img:'vegetarianskaya', d:'Шампиньоны, лук, сочный болгарский перец, маслины, томаты, шпинат, моцарелла', p:[760,860], c:['veg'], t:['veg'], sauce:0},
+  {n:'Гавайская', img:'gavayskaya', d:'Копчёная куриная грудка, куриная ветчина, ананас, моцарелла', p:[810,910], c:['meat'], sauce:1},
+  {n:'Мексиканская', img:'meksikanskaya', d:'Салями, охотничьи колбаски, халапеньо, болгарский перец, кукуруза, томаты, моцарелла, мексиканский соус', p:[869,969], c:['meat','hot'], t:['hot'], sauce:0},
+  {n:'Амазонка', img:'amazonka', d:'Красный томатный соус, салями, красный маринованный лук, шампиньоны, помидоры, каперсы, моцарелла', p:[869,969], c:['meat']},
+  {n:'Сочная', img:'sochnaya', d:'Белый соус, два вида ветчины, много бекона, пармезан, моцарелла, помидорки черри', p:[800,900], c:['meat']},
+  {n:'Аль Капоне', img:'alkapone', d:'Красный соус, свиная ветчина, салями, шампиньоны, томаты, моцарелла, халапеньо, итальянские травы', p:[839,939], c:['meat','hot'], t:['hot']},
+  {n:'Пицца с креветками', img:'krevetki', d:'Моцарелла, тигровые креветки, томаты, сливочный сыр, соус сладкий чили', p:[900,1000], c:['sea'], t:['sea'], sauce:0},
+  {n:'Морская с лососем', img:'morskaya-losos', d:'Морской коктейль, лосось, помидорки черри, каперсы, моцарелла, итальянские травы', p:[950,1050], c:['sea'], t:['sea'], sauce:1},
+  {n:'Курочка-барбекю', img:'kurochka-barbekyu', d:'Соус барбекю, сочная курочка, бекон, моцарелла, красный лук', p:[849,949], c:['meat']},
+];
+const CATS = [['all','Все'],['classic','Классика'],['meat','Мясные'],['veg','Без мяса'],['hot','Острые'],['sea','Морские']];
+const TAGS = {hot:['Острая','tag-hot'], veg:['Без мяса','tag-veg'], sea:['Морская','tag-sea']};
+const SIZES = ['30 см','40 см'], SAUCES = ['Красный соус','Белый соус'];
+const fmt = n => n.toLocaleString('ru-RU') + ' ₽';
+const seg = (cls, items, on) => `<div class="seg ${cls}" role="group" aria-label="${cls === 'sizes' ? 'Размер пиццы' : 'Соус'}">${items.map((s, k) => `<button type="button" aria-pressed="${k === on}" data-k="${k}"${k === on ? ' class="on"' : ''}>${s}</button>`).join('')}</div>`;
+const plus = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
+const check = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
+
+const grid = document.getElementById('grid');
+grid.innerHTML = MENU.map((p, i) => `
+  <article class="card" data-cat="${p.c.join(' ')}" data-i="${i}">
+    <div class="card-photo">
+      <img src="img/pizza/${p.img}.jpg?v=3" alt="Пицца ${p.n}" width="900" height="900" loading="lazy">
+      ${p.t ? `<div class="tags">${p.t.map(t => `<span class="tag ${TAGS[t][1]}">${TAGS[t][0]}</span>`).join('')}</div>` : ''}
+    </div>
+    <div class="card-body">
+      <h3>${p.n}</h3>
+      <p>${p.d}</p>
+      <div class="opts">${seg('sizes', SIZES, 0)}${p.sauce !== undefined ? seg('sauces', SAUCES, p.sauce) : ''}</div>
+      <div class="card-foot">
+        <div class="price"><b>${fmt(p.p[0])}</b><small>${SIZES[0]}</small></div>
+        <button class="add" type="button"><span class="add-label">${plus}В корзину</span><span class="add-ok" aria-hidden="true">${check}Добавлено</span></button>
+      </div>
+    </div>
+  </article>`).join('') + `
+  <div class="extra extra-promo">
+    <div><small>Каждый понедельник</small><div class="extra-big">−10%</div><h3>на&nbsp;любую пиццу из&nbsp;меню</h3></div>
+    <a class="btn" href="#menu">Выбрать пиццу</a>
+  </div>
+  <div class="extra extra-call">
+    <div><small>Не знаете, что выбрать?</small><h3>Позвоните&nbsp;— поможем с&nbsp;выбором и&nbsp;примем заказ</h3></div>
+    <a class="btn" href="tel:+79000000000">+7 (900) 000-00-00</a>
+  </div>`;
+
+const chips = document.getElementById('chips');
+chips.innerHTML = CATS.map(([k, l]) =>
+  `<button class="chip${k === 'all' ? ' active' : ''}" data-k="${k}">${l}<small>${k === 'all' ? MENU.length : MENU.filter(p => p.c.includes(k)).length}</small></button>`).join('');
+chips.addEventListener('click', e => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  const k = b.dataset.k;
+  chips.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c === b));
+  grid.querySelectorAll('.card, .extra').forEach(c => {
+    const show = k === 'all' || (c.dataset.cat || '').split(' ').includes(k);
+    c.hidden = !show;
+    if (show){ c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); }
+  });
+});
+
+/* ---------- корзина и оформление (только интерфейс: заказ никуда не отправляется) ---------- */
+const $ = id => document.getElementById(id);
+const ZONES = [
+  {n:'Еманжелинск', s:'бесплатно от 1 700 ₽', to:'по Еманжелинску', fee:100, free:1700},
+  {n:'пос. Зауральский', s:'бесплатно от 2 500 ₽', to:'в Зауральский', fee:200, free:2500},
+  {n:'д. Еманжелинка', s:'бесплатно от 2 500 ₽', to:'в Еманжелинку', fee:200, free:2500},
+];
+const PIZZAS = ['пицца','пиццы','пицц'];
+const plural = (n, f) => f[n % 10 === 1 && n % 100 !== 11 ? 0 : [2,3,4].includes(n % 10) && ![12,13,14].includes(n % 100) ? 1 : 2];
+const minus = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg>';
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const optText = it => SIZES[it.size] + (it.sauce >= 0 ? ', ' + SAUCES[it.sauce].toLowerCase() : '');
+// акция «понедельник −10%» считается по местному времени (Челябинская область)
+const isMonday = () => new Intl.DateTimeFormat('en-US', {timeZone:'Asia/Yekaterinburg', weekday:'short'}).format(new Date()) === 'Mon';
+
+const drawer = $('cart'), drawerBody = $('drawerBody'), form = $('orderForm');
+const cartCount = $('cartCount'), cartBar = $('cartBar'), toast = $('toast');
+let cart = [], zone = 0, view = '', toastTimer;
+
+function totals(){
+  const qty = cart.reduce((s, it) => s + it.qty, 0);
+  const sub = cart.reduce((s, it) => s + MENU[it.i].p[it.size] * it.qty, 0);
+  const disc = isMonday() ? Math.round(sub * .1) : 0;
+  const food = sub - disc, z = ZONES[zone];
+  const delivery = qty && food < z.free ? z.fee : 0;
+  return {qty, sub, disc, food, delivery, total:food + delivery, z};
+}
+
+function addToCart(i, size, sauce){
+  const it = cart.find(x => x.i === i && x.size === size && x.sauce === sauce);
+  if (it) it.qty = Math.min(it.qty + 1, 99); else cart.push({i, size, sauce, qty:1});
+  render();
+}
+
+function render(){
+  const t = totals();
+  cartCount.textContent = t.qty;
+  $('cartBarText').textContent = `Корзина · ${t.qty} ${plural(t.qty, PIZZAS)}`;
+  $('cartBarSum').textContent = fmt(t.food);
+  cartBar.classList.toggle('show', t.qty > 0);
+
+  $('items').innerHTML = cart.map((it, k) => {
+    const p = MENU[it.i];
+    return `<div class="item" data-k="${k}">
+      <img src="img/pizza/${p.img}.jpg?v=3" alt="" width="76" height="76">
+      <div><h4>${p.n}</h4><div class="item-opts">${optText(it)}</div></div>
+      <div class="item-side">
+        <span class="item-price">${fmt(p.p[it.size] * it.qty)}</span>
+        <div class="stepper"><button type="button" data-act="minus" aria-label="Убрать одну">${minus}</button><output>${it.qty}</output><button type="button" data-act="plus" aria-label="Добавить ещё одну">${plus}</button></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const left = t.z.free - t.food, bar = $('freeBar');
+  bar.classList.toggle('reached', left <= 0);
+  bar.querySelector('p').innerHTML = left > 0
+    ? `<span>До бесплатной доставки ${t.z.to}</span><b>${fmt(left)}</b>`
+    : `<span>Доставка ${t.z.to} — бесплатно</span><b>0 ₽</b>`;
+  bar.querySelector('i').style.width = Math.min(100, t.food / t.z.free * 100) + '%';
+
+  $('promoNote').innerHTML = t.disc
+    ? '<b>−10%</b><span>Сегодня понедельник — скидка 10% уже учтена в&nbsp;сумме</span>'
+    : '<b>−10%</b><span>По понедельникам скидка 10% на&nbsp;все пиццы</span>';
+
+  const inCart = new Set(cart.map(it => it.i));
+  $('upsell').innerHTML = MENU.map((p, i) => ({p, i})).filter(x => !inCart.has(x.i)).slice(0, 6).map(({p, i}) =>
+    `<button class="ups" type="button" data-i="${i}"><img src="img/pizza/${p.img}.jpg?v=3" alt="" width="140" height="140" loading="lazy"><b>${p.n}</b><span>от ${fmt(p.p[0])}<i>${plus}</i></span></button>`).join('');
+
+  if (view === 'cart' || view === 'empty') setView(t.qty ? 'cart' : 'empty');
+  else updateFoot();
+}
+
+function updateFoot(){
+  const t = totals();
+  const rows = [`<div><span>${t.qty} ${plural(t.qty, PIZZAS)}</span><b>${fmt(t.sub)}</b></div>`];
+  if (t.disc) rows.push(`<div class="minus"><span>Скидка понедельника</span><b>−${fmt(t.disc)}</b></div>`);
+  rows.push(`<div><span>Доставка ${t.z.to}</span><b>${t.delivery ? fmt(t.delivery) : 'бесплатно'}</b></div>`);
+  $('sumRows').innerHTML = rows.join('');
+  $('mainSum').textContent = view === 'done' ? '' : fmt(t.total);
+  $('cartTitle').innerHTML = view === 'checkout' ? 'Оформление' : view === 'done' ? 'Готово'
+    : `Корзина${t.qty ? ` <small>${t.qty} ${plural(t.qty, PIZZAS)}</small>` : ''}`;
+}
+
+function setView(v){
+  if (v !== view) drawerBody.scrollTop = 0;
+  view = v;
+  drawerBody.querySelectorAll('.view').forEach(s => s.classList.toggle('active', s.dataset.view === v));
+  const step = {empty:0, cart:0, checkout:1, done:2}[v];
+  $('progress').querySelectorAll('span').forEach((s, k) => s.classList.toggle('on', k <= step));
+  $('backBtn').hidden = v !== 'checkout';
+  $('drawerFoot').hidden = v === 'empty';
+  $('sumRows').hidden = v === 'done';
+  $('legal').hidden = v !== 'checkout';
+  $('mainBtn').classList.toggle('center', v === 'done');
+  $('mainLabel').textContent = v === 'checkout' ? 'Отправить заказ' : v === 'done' ? 'Вернуться в меню' : 'Оформить заказ';
+  updateFoot();
+}
+
+function openCart(){
+  if (view !== 'checkout') setView(totals().qty ? 'cart' : 'empty');
+  drawer.classList.add('open');
+  drawer.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lock');
+  toast.classList.remove('show');
+  setTimeout(() => $('cartTitle').focus({preventScroll:true}), 60);
+}
+function closeCart(){
+  drawer.classList.remove('open');
+  drawer.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lock');
+}
+function toMenu(){
+  closeCart();
+  $('menu').scrollIntoView({behavior:'smooth'});
+}
+
+document.addEventListener('click', e => {
+  if (e.target.closest('[data-open-cart]')) openCart();
+  else if (e.target.closest('[data-close]')) closeCart();
+  else if (e.target.closest('[data-to-menu]')) toMenu();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closeCart(); });
+$('backBtn').addEventListener('click', () => setView('cart'));
+$('mainBtn').addEventListener('click', () => {
+  if (view === 'cart') setView('checkout');
+  else if (view === 'checkout') submitOrder();
+  else toMenu();
+});
+$('items').addEventListener('click', e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const it = cart[+b.closest('.item').dataset.k];
+  it.qty = Math.min(it.qty + (b.dataset.act === 'plus' ? 1 : -1), 99);
+  if (it.qty <= 0) cart.splice(cart.indexOf(it), 1);
+  render();
+});
+$('upsell').addEventListener('click', e => {
+  const b = e.target.closest('.ups'); if (!b) return;
+  const i = +b.dataset.i;
+  addToCart(i, 0, MENU[i].sauce ?? -1);
+});
+
+/* ---------- карточки меню: размер, соус, «в корзину» ---------- */
+grid.addEventListener('click', e => {
+  const card = e.target.closest('.card'); if (!card) return;
+  const i = +card.dataset.i, p = MENU[i];
+  const opt = e.target.closest('.seg button');
+  if (opt){
+    opt.parentElement.querySelectorAll('button').forEach(b => { b.classList.toggle('on', b === opt); b.setAttribute('aria-pressed', b === opt); });
+    const k = +card.querySelector('.sizes .on').dataset.k;
+    card.querySelector('.price b').textContent = fmt(p.p[k]);
+    card.querySelector('.price small').textContent = SIZES[k];
+  }
+  const add = e.target.closest('.add'); if (!add) return;
+  const size = +card.querySelector('.sizes .on').dataset.k;
+  const sauceBtn = card.querySelector('.sauces .on');
+  addToCart(i, size, sauceBtn ? +sauceBtn.dataset.k : -1);
+  cartCount.classList.add('bump'); setTimeout(() => cartCount.classList.remove('bump'), 250);
+  add.classList.add('done');
+  clearTimeout(add.timer);
+  add.timer = setTimeout(() => add.classList.remove('done'), 1400);
+  toast.innerHTML = `<b>${p.n}, ${SIZES[size]}</b> — в корзине`;
+  toast.classList.add('show'); clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+});
+
+/* ---------- форма оформления ---------- */
+$('zoneOpts').innerHTML = ZONES.map((z, k) =>
+  `<label class="zone-opt"><input type="radio" name="zone" value="${k}"${k ? '' : ' checked'}><span class="radio"></span><b>${z.n}<small>${z.s}</small></b><em>${z.fee} ₽</em></label>`).join('');
+const times = [];
+for (let m = 10 * 60 + 30; m <= 21 * 60 + 30; m += 30) times.push(`${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`);
+$('timeSelect').innerHTML = times.map(t => `<option>к ${t}</option>`).join('');
+
+form.addEventListener('change', e => {
+  const {name, value} = e.target;
+  if (name === 'zone'){ zone = +value; render(); }
+  if (name === 'when') $('timeFld').hidden = value !== 'time';
+  if (name === 'pay') $('changeFld').hidden = value !== 'cash';
+});
+form.addEventListener('input', e => e.target.closest('.fld')?.classList.remove('err'));
+form.elements.phone.addEventListener('input', e => {
+  let d = e.target.value.replace(/\D/g, '');
+  if (!d){ e.target.value = ''; return; }
+  if (d[0] === '8') d = '7' + d.slice(1);
+  if (d[0] !== '7') d = '7' + d;
+  d = d.slice(1, 11);
+  let v = '+7 (' + d.slice(0, 3);
+  if (d.length > 3) v += ') ' + d.slice(3, 6);
+  if (d.length > 6) v += '-' + d.slice(6, 8);
+  if (d.length > 8) v += '-' + d.slice(8, 10);
+  e.target.value = v;
+});
+
+function submitOrder(){
+  const f = form.elements;
+  const checks = [
+    ['f-street', f.street.value.trim().length >= 3],
+    ['f-name', /\p{L}/u.test(f.name.value)],
+    ['f-phone', f.phone.value.replace(/\D/g, '').length === 11],
+  ];
+  checks.forEach(([id, ok]) => $(id).classList.toggle('err', !ok));
+  const bad = checks.find(([, ok]) => !ok);
+  if (bad){
+    $(bad[0]).scrollIntoView({block:'center', behavior:'smooth'});
+    $(bad[0]).querySelector('input').focus({preventScroll:true});
+    return;
+  }
+  const t = totals();
+  const row = (a, b, cls = '') => `<div class="receipt-row ${cls}"><span>${a}</span><b>${b}</b></div>`;
+  const addr = [ZONES[zone].n, f.street.value.trim(), f.entrance.value.trim() && 'подъезд ' + f.entrance.value.trim(),
+    f.floor.value.trim() && 'этаж ' + f.floor.value.trim(), f.flat.value.trim() && 'кв. ' + f.flat.value.trim()].filter(Boolean).join(', ');
+  const pay = f.pay.value === 'cash' ? 'наличными' + (f.change.value.trim() ? ', сдача с ' + f.change.value.trim() : '') : 'картой курьеру';
+  $('receipt').innerHTML = '<h4>Состав заказа</h4>'
+    + cart.map(it => row(`${MENU[it.i].n} × ${it.qty}<br><small>${optText(it)}</small>`, fmt(MENU[it.i].p[it.size] * it.qty))).join('')
+    + (t.disc ? row('Скидка понедельника', '−' + fmt(t.disc)) : '')
+    + row('Доставка', t.delivery ? fmt(t.delivery) : 'бесплатно')
+    + row('Итого', fmt(t.total), 'total')
+    + '<h4>Доставка</h4>'
+    + row('Адрес', esc(addr))
+    + row('Когда', f.when.value === 'time' ? esc(f.time.value) : 'как можно скорее')
+    + row('Оплата', esc(pay))
+    + (f.comment.value.trim() ? row('Комментарий', esc(f.comment.value.trim())) : '');
+  $('doneNum').textContent = 'Заказ № ' + (1000 + Math.floor(Math.random() * 9000));
+  $('donePhone').textContent = f.phone.value;
+  cart = [];
+  form.reset();
+  zone = 0;
+  $('timeFld').hidden = true;
+  $('changeFld').hidden = false;
+  setView('done');
+  render();
+}
+
+setView('empty');
+render();
+
+</script>
+</body>
+</html>
